@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Example</title>
+    <title>Full Screen Layout</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
         header {
             background-color: #4CAF50;
             color: white;
@@ -22,7 +39,8 @@
 
         .container {
             display: flex;
-            min-height: 300px;
+            flex: 1;
+            /* Fill remaining space */
         }
 
         .sidebar-left {
